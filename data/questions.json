@@ -1,0 +1,560 @@
+{
+  "questions": [
+    {
+      "id": "mc-1493",
+      "src": "metaculus",
+      "cat": "catastrophe",
+      "q": "Will the human population fall by at least 10% in any 5-year period before 2100?",
+      "h": "by 2100",
+      "url": "https://www.metaculus.com/questions/1493/",
+      "note": "Any cause. Base of the Ragnarök series.",
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 1493
+      }
+    },
+    {
+      "id": "mc-1495",
+      "src": "metaculus",
+      "cat": "catastrophe",
+      "q": "If a global catastrophe occurs, will it be due to an AI failure mode?",
+      "h": "by 2100",
+      "url": "https://www.metaculus.com/questions/1495/",
+      "conditional": true,
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 1495
+      }
+    },
+    {
+      "id": "mc-2513",
+      "src": "metaculus",
+      "cat": "catastrophe",
+      "q": "If an AI catastrophe occurs, will it reduce the human population by 95% or more?",
+      "h": "by 2100",
+      "url": "https://www.metaculus.com/questions/2513/",
+      "conditional": true,
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 2513
+      }
+    },
+    {
+      "id": "mc-implied-cat",
+      "src": "derived",
+      "cat": "catastrophe",
+      "q": "Implied: AI causes a catastrophe that kills 10% or more of humanity by 2100",
+      "h": "by 2100",
+      "url": "https://www.metaculus.com/questions/1495/",
+      "note": "Metaculus 1493 × 1495. Our calculation, not a Metaculus forecast.",
+      "unit": null,
+      "source": {
+        "type": "derived",
+        "of": [
+          "mc-1493",
+          "mc-1495"
+        ]
+      }
+    },
+    {
+      "id": "mc-implied-ext",
+      "src": "derived",
+      "cat": "catastrophe",
+      "q": "Implied: AI catastrophe reduces humanity by 95% or more by 2100",
+      "h": "by 2100",
+      "url": "https://www.metaculus.com/questions/2513/",
+      "note": "Metaculus 1493 × 1495 × 2513. Our calculation, not a Metaculus forecast.",
+      "unit": null,
+      "source": {
+        "type": "derived",
+        "of": [
+          "mc-1493",
+          "mc-1495",
+          "mc-2513"
+        ]
+      }
+    },
+    {
+      "id": "mc-578",
+      "src": "metaculus",
+      "cat": "catastrophe",
+      "q": "Will humans go extinct before 2100?",
+      "h": "by 2100",
+      "url": "https://www.metaculus.com/questions/578/",
+      "note": "Any cause.",
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 578
+      }
+    },
+    {
+      "id": "mf-wipe-2030",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will AI wipe out humanity before the year 2030?",
+      "h": "by 2030",
+      "url": "https://manifold.markets/MartinRandall/will-ai-wipe-out-humanity-before-th-d8733b2114a8",
+      "note": "Extinction markets cannot pay out if YES, so prices skew low.",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-ai-wipe-out-humanity-before-th-d8733b2114a8"
+      }
+    },
+    {
+      "id": "mf-wipe-2040",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will AI wipe out humanity before the year 2040?",
+      "h": "by 2040",
+      "url": "https://manifold.markets/Tripping/will-ai-wipe-out-humanity-before-th-6d1e8126d974",
+      "note": "Extinction markets cannot pay out if YES, so prices skew low.",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-ai-wipe-out-humanity-before-th-6d1e8126d974"
+      }
+    },
+    {
+      "id": "mf-wipe-2060",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will AI wipe out humanity before the year 2060?",
+      "h": "by 2060",
+      "url": "https://manifold.markets/JamesBills/will-ai-wipe-out-humanity-before-th-6e8e547afa66",
+      "note": "Extinction markets cannot pay out if YES, so prices skew low.",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-ai-wipe-out-humanity-before-th-6e8e547afa66"
+      }
+    },
+    {
+      "id": "mf-wipe-2100",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will AI wipe out humanity before the year 2100?",
+      "h": "by 2100",
+      "url": "https://manifold.markets/jdilla/will-ai-wipe-out-humanity-before-th",
+      "note": "Extinction markets cannot pay out if YES, so prices skew low.",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-ai-wipe-out-humanity-before-th"
+      }
+    },
+    {
+      "id": "mf-misaligned-50",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will misaligned AI kill more than 50% of humanity before 2040?",
+      "h": "by 2040",
+      "url": "https://manifold.markets/ahalekelly/will-misaligned-ai-kill-50-of-the-h",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-misaligned-ai-kill-50-of-the-h"
+      }
+    },
+    {
+      "id": "mf-gc-10",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will AI cause a global catastrophe killing at least 10% of humans before 2100?",
+      "h": "by 2100",
+      "url": "https://manifold.markets/jack/global-catastrophe-series-by-2100-w-73fc5b6f55b0",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "global-catastrophe-series-by-2100-w-73fc5b6f55b0"
+      }
+    },
+    {
+      "id": "mf-massive-2030",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will there be a massive catastrophe caused by AI before 2030?",
+      "h": "by 2030",
+      "url": "https://manifold.markets/ersatz/will-there-be-a-massive-catastrophe",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-there-be-a-massive-catastrophe"
+      }
+    },
+    {
+      "id": "mf-rogue-2031",
+      "src": "manifold",
+      "cat": "catastrophe",
+      "q": "Will we get rogue AI before 2031?",
+      "h": "by 2031",
+      "url": "https://manifold.markets/RemNi/will-we-get-rouge-ai-before-2031",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-we-get-rouge-ai-before-2031"
+      }
+    },
+    {
+      "id": "mc-7814",
+      "src": "metaculus",
+      "cat": "misuse",
+      "q": "Before 2032, will an AI malfunction cause at least 100 deaths or $1B in damage?",
+      "h": "by 2032",
+      "url": "https://www.metaculus.com/questions/7814/",
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 7814
+      }
+    },
+    {
+      "id": "mc-39136",
+      "src": "metaculus",
+      "cat": "misuse",
+      "q": "Will a cyberattack targeting AI systems cause a significant US power blackout before 2028?",
+      "h": "by 2028",
+      "url": "https://www.metaculus.com/questions/39136/",
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 39136
+      }
+    },
+    {
+      "id": "mc-2611",
+      "src": "metaculus",
+      "cat": "misuse",
+      "q": "Will synthetic biological weapons infect 100 people by 2030?",
+      "h": "by 2030",
+      "url": "https://www.metaculus.com/questions/2611/",
+      "note": "Not AI-specific. Included as the bio-misuse baseline.",
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 2611
+      }
+    },
+    {
+      "id": "mf-warning-shot",
+      "src": "manifold",
+      "cat": "misuse",
+      "q": "Will there be an AI warning shot before October 20, 2026?",
+      "h": "Oct 2026",
+      "url": "https://manifold.markets/LeoGao/will-there-be-a-warning-shot-before",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-there-be-a-warning-shot-before"
+      }
+    },
+    {
+      "id": "mf-bio-plan",
+      "src": "manifold",
+      "cat": "misuse",
+      "q": "Will AI be able to provide an end-to-end plan for bioweapons production by end of 2026?",
+      "h": "by 2027",
+      "url": "https://manifold.markets/causal_agency/will-ai-be-able-to-provide-an-endto",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-ai-be-able-to-provide-an-endto"
+      }
+    },
+    {
+      "id": "mf-disaster-100",
+      "src": "manifold",
+      "cat": "misuse",
+      "q": "Does an AI disaster kill at least 100 people before 2040?",
+      "h": "by 2040",
+      "url": "https://manifold.markets/ScroogeMcDuck/does-an-ai-disaster-kill-at-least-1-73bcb6a788ab",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "does-an-ai-disaster-kill-at-least-1-73bcb6a788ab"
+      }
+    },
+    {
+      "id": "mf-agent-prolif",
+      "src": "manifold",
+      "cat": "misuse",
+      "q": "Will there be a highly risky or catastrophic AI agent proliferation event before 2035?",
+      "h": "by 2035",
+      "url": "https://manifold.markets/dogway/will-there-be-a-highly-risky-or-cat",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-there-be-a-highly-risky-or-cat"
+      }
+    },
+    {
+      "id": "pm-safety-bill",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will the U.S. enact an AI safety bill before 2027?",
+      "h": "by 2027",
+      "url": "https://polymarket.com/event/us-enacts-ai-safety-bill-before-2027",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "us-enacts-ai-safety-bill-before-2027",
+        "token": "112508072057994582792425094054868799670328706955765422423524843982075694185575"
+      }
+    },
+    {
+      "id": "pm-uscn-pace",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will the US and China agree to pace the AI frontier in 2026?",
+      "h": "by 2027",
+      "url": "https://polymarket.com/event/us-x-china-agree-to-pace-the-ai-frontier-in-2026",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "us-x-china-agree-to-pace-the-ai-frontier-in-2026",
+        "token": "97987658922460882346584683594420542790305392213029477153076387241217977264091"
+      }
+    },
+    {
+      "id": "pm-google-vetting",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will Google match Anthropic's third-party evaluator commitment by October 31?",
+      "h": "Oct 2026",
+      "url": "https://polymarket.com/event/which-ai-labs-commit-to-third-party-vetting-by-october-31",
+      "note": "Volume is for the whole multi-lab event.",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "which-ai-labs-commit-to-third-party-vetting-by-october-31",
+        "market": "Google",
+        "token": "47352227031917249355148584579289124787354556217434226185009427148285152875802"
+      }
+    },
+    {
+      "id": "pm-msft-vetting",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will Microsoft match Anthropic's third-party evaluator commitment by October 31?",
+      "h": "Oct 2026",
+      "url": "https://polymarket.com/event/which-ai-labs-commit-to-third-party-vetting-by-october-31",
+      "note": "Volume is for the whole multi-lab event.",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "which-ai-labs-commit-to-third-party-vetting-by-october-31",
+        "market": "Microsoft",
+        "token": "106186488052109349080580043959770836921518625390853725187031059572923714230188"
+      }
+    },
+    {
+      "id": "pm-remove-access",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will the US government remove public access to another major AI model in 2026?",
+      "h": "by 2027",
+      "url": "https://polymarket.com/event/us-government-removes-public-access-to-another-major-ai-model-in-2026-20260703202936862",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "us-government-removes-public-access-to-another-major-ai-model-in-2026-20260703202936862",
+        "token": "16053145826118773312246179531655129615950816937901125938900925035990196309246"
+      }
+    },
+    {
+      "id": "pm-ban-open",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will the US government ban an open-source AI model in 2026?",
+      "h": "by 2027",
+      "url": "https://polymarket.com/event/us-government-bans-an-open-source-ai-model-in-2026-20260703221501747",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "us-government-bans-an-open-source-ai-model-in-2026-20260703221501747",
+        "token": "101910059459080267734783515584096384502192846613471309308630745610886383358221"
+      }
+    },
+    {
+      "id": "pm-lab-pulls",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will a frontier AI lab pull a model over safety concerns in 2026?",
+      "h": "by 2027",
+      "url": "https://polymarket.com/event/frontier-ai-lab-pulls-a-model-over-safety-concerns-in-2026",
+      "note": "Very thin market: about $100 traded so far.",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "frontier-ai-lab-pulls-a-model-over-safety-concerns-in-2026",
+        "token": "112591125802436587140148457661224657853932926548465226568951178671729168572464"
+      }
+    },
+    {
+      "id": "pm-labs-pacing",
+      "src": "polymarket",
+      "cat": "governance",
+      "q": "Will frontier AI labs announce a new joint pacing agreement in 2026?",
+      "h": "by 2027",
+      "url": "https://polymarket.com/event/frontier-ai-labs-announce-new-joint-pacing-agreement-in-2026",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "frontier-ai-labs-announce-new-joint-pacing-agreement-in-2026",
+        "token": "1920595398178187311964733360579981734732663636585721621801510542058550773620"
+      }
+    },
+    {
+      "id": "ks-kimi-ban",
+      "src": "kalshi",
+      "cat": "governance",
+      "q": "Will the US restrict access to Kimi's flagship model before 2027?",
+      "h": "by 2027",
+      "url": "https://kalshi.com/markets/kxkimiban",
+      "unit": "volume",
+      "source": {
+        "type": "kalshi",
+        "ticker": "KXKIMIBAN-27-27JAN01",
+        "series": "KXKIMIBAN"
+      }
+    },
+    {
+      "id": "mc-38418",
+      "src": "metaculus",
+      "cat": "governance",
+      "q": "Will the US and China reach a formal agreement to limit frontier AI training or deployment before 2029?",
+      "h": "by 2029",
+      "url": "https://www.metaculus.com/questions/38418/",
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 38418
+      }
+    },
+    {
+      "id": "mc-39149",
+      "src": "metaculus",
+      "cat": "governance",
+      "q": "Will the US and China sign a verifiable treaty limiting AGI development by 2030?",
+      "h": "by 2031",
+      "url": "https://www.metaculus.com/questions/39149/",
+      "unit": "forecasters",
+      "source": {
+        "type": "metaculus",
+        "id": 39149
+      }
+    },
+    {
+      "id": "mf-ban-asi-act",
+      "src": "manifold",
+      "cat": "governance",
+      "q": "Will the Ban Superintelligence Act pass by the end of 2027?",
+      "h": "by 2028",
+      "url": "https://manifold.markets/Jarizu/will-the-ban-superintelligence-act",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-the-ban-superintelligence-act"
+      }
+    },
+    {
+      "id": "mf-intl-pause-2028",
+      "src": "manifold",
+      "cat": "governance",
+      "q": "Will an international pause on large AI training runs be in effect on Jan 1, 2028?",
+      "h": "Jan 2028",
+      "url": "https://manifold.markets/AdamK/will-an-international-pause-on-larg",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-an-international-pause-on-larg"
+      }
+    },
+    {
+      "id": "mf-pause-before-agi",
+      "src": "manifold",
+      "cat": "governance",
+      "q": "Will there be a global pause on the largest AI training runs at any point before AGI?",
+      "h": "before AGI",
+      "url": "https://manifold.markets/Simon74fe/will-there-be-a-global-pause-on-the",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-there-be-a-global-pause-on-the"
+      }
+    },
+    {
+      "id": "mf-lab-pause",
+      "src": "manifold",
+      "cat": "governance",
+      "q": "Will a major tech company publicly pause or limit AI development due to safety concerns before 2027?",
+      "h": "by 2027",
+      "url": "https://manifold.markets/Ding/will-a-major-tech-company-publicly",
+      "unit": "traders",
+      "source": {
+        "type": "manifold",
+        "slug": "will-a-major-tech-company-publicly"
+      }
+    },
+    {
+      "id": "ks-oaiagi-26",
+      "src": "kalshi",
+      "cat": "context",
+      "q": "Will OpenAI announce the creation of AGI before 2027?",
+      "h": "by 2027",
+      "url": "https://kalshi.com/markets/kxoaiagi",
+      "unit": "volume",
+      "source": {
+        "type": "kalshi",
+        "ticker": "OAIAGI-26",
+        "series": "KXOAIAGI"
+      }
+    },
+    {
+      "id": "ks-oaiagi-27",
+      "src": "kalshi",
+      "cat": "context",
+      "q": "Will OpenAI announce the creation of AGI before 2028?",
+      "h": "by 2028",
+      "url": "https://kalshi.com/markets/kxoaiagi",
+      "unit": "volume",
+      "source": {
+        "type": "kalshi",
+        "ticker": "OAIAGI-27",
+        "series": "KXOAIAGI"
+      }
+    },
+    {
+      "id": "ks-oaiagi-29",
+      "src": "kalshi",
+      "cat": "context",
+      "q": "Will OpenAI announce the creation of AGI before 2030?",
+      "h": "by 2030",
+      "url": "https://kalshi.com/markets/kxoaiagi",
+      "unit": "volume",
+      "source": {
+        "type": "kalshi",
+        "ticker": "OAIAGI-29",
+        "series": "KXOAIAGI"
+      }
+    },
+    {
+      "id": "pm-oai-agi",
+      "src": "polymarket",
+      "cat": "context",
+      "q": "Will OpenAI announce it has achieved AGI before 2027?",
+      "h": "by 2027",
+      "url": "https://polymarket.com/event/openai-announces-it-has-achieved-agi-before-2027",
+      "unit": "volume",
+      "source": {
+        "type": "polymarket",
+        "event": "openai-announces-it-has-achieved-agi-before-2027",
+        "token": "115755033510457721528230598637869053553488546416290388126901840137082000566077"
+      }
+    }
+  ]
+}

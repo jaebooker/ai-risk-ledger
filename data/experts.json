@@ -1,0 +1,202 @@
+{
+  "studies": [
+    {
+      "name": "AIRO (Forecasting Research Institute)",
+      "what": "AI catastrophe (≥10% of humanity dies) by 2050",
+      "p": 0.06,
+      "when": "Sep 2026",
+      "url": "https://airo.forecastingresearch.org/",
+      "note": "Ensemble of frontier AI models. 0.47% by 2030."
+    },
+    {
+      "name": "AIRO (Forecasting Research Institute)",
+      "what": "AI catastrophe (≥10% of humanity dies) by 2030",
+      "p": 0.0047,
+      "when": "Sep 2026",
+      "url": "https://airo.forecastingresearch.org/",
+      "note": "Ensemble of frontier AI models."
+    },
+    {
+      "name": "XPT: domain experts",
+      "what": "AI-caused catastrophe by 2100",
+      "p": 0.12,
+      "when": "2022",
+      "url": "https://forecastingresearch.org/xpt",
+      "note": "Existential Risk Persuasion Tournament."
+    },
+    {
+      "name": "XPT: superforecasters",
+      "what": "AI-caused catastrophe by 2100",
+      "p": 0.0213,
+      "when": "2022",
+      "url": "https://forecastingresearch.org/xpt",
+      "note": "Existential Risk Persuasion Tournament."
+    },
+    {
+      "name": "XPT: domain experts",
+      "what": "AI-caused human extinction by 2100",
+      "p": 0.03,
+      "when": "2022",
+      "url": "https://forecastingresearch.org/xpt",
+      "note": "Existential Risk Persuasion Tournament."
+    },
+    {
+      "name": "XPT: superforecasters",
+      "what": "AI-caused human extinction by 2100",
+      "p": 0.0038,
+      "when": "2022",
+      "url": "https://forecastingresearch.org/xpt",
+      "note": "Existential Risk Persuasion Tournament."
+    },
+    {
+      "name": "AI Impacts survey of ML researchers",
+      "what": "Extremely bad outcome, e.g. extinction (median)",
+      "p": 0.05,
+      "when": "2023",
+      "url": "https://aiimpacts.org/",
+      "note": "2,778 researchers who published at top ML venues."
+    }
+  ],
+  "people": [
+    {
+      "name": "Roman Yampolskiy",
+      "lo": 0.999,
+      "hi": 0.999,
+      "label": "99.9%+",
+      "role": "Computer scientist"
+    },
+    {
+      "name": "Eliezer Yudkowsky",
+      "lo": 0.95,
+      "hi": 0.95,
+      "label": ">95%",
+      "role": "MIRI founder"
+    },
+    {
+      "name": "Max Tegmark",
+      "lo": 0.9,
+      "hi": 0.9,
+      "label": ">90%",
+      "role": "MIT physicist, FLI"
+    },
+    {
+      "name": "Connor Leahy",
+      "lo": 0.9,
+      "hi": 0.9,
+      "label": "90%+",
+      "role": "Conjecture"
+    },
+    {
+      "name": "Andrew Critch",
+      "lo": 0.85,
+      "hi": 0.85,
+      "label": "85%",
+      "role": "CFAR founder"
+    },
+    {
+      "name": "David Duvenaud",
+      "lo": 0.85,
+      "hi": 0.85,
+      "label": "85%",
+      "role": "University of Toronto"
+    },
+    {
+      "name": "Daniel Kokotajlo",
+      "lo": 0.7,
+      "hi": 0.8,
+      "label": "70–80%",
+      "role": "AI Futures Project"
+    },
+    {
+      "name": "David Krueger",
+      "lo": 0.75,
+      "hi": 0.75,
+      "label": "75%",
+      "role": "ML professor"
+    },
+    {
+      "name": "Zvi Mowshowitz",
+      "lo": 0.7,
+      "hi": 0.7,
+      "label": "70%",
+      "role": "Writer"
+    },
+    {
+      "name": "Paul Christiano",
+      "lo": 0.5,
+      "hi": 0.5,
+      "label": "50%",
+      "role": "US AI Safety Institute"
+    },
+    {
+      "name": "Holden Karnofsky",
+      "lo": 0.5,
+      "hi": 0.5,
+      "label": "50%",
+      "role": "Open Philanthropy"
+    },
+    {
+      "name": "Elon Musk",
+      "lo": 0.1,
+      "hi": 0.3,
+      "label": "10–30%",
+      "role": "xAI"
+    },
+    {
+      "name": "Dario Amodei",
+      "lo": 0.1,
+      "hi": 0.25,
+      "label": "10–25%",
+      "role": "Anthropic"
+    },
+    {
+      "name": "Yoshua Bengio",
+      "lo": 0.2,
+      "hi": 0.2,
+      "label": "20%",
+      "role": "Mila, Turing laureate"
+    },
+    {
+      "name": "Geoffrey Hinton",
+      "lo": 0.1,
+      "hi": 0.2,
+      "label": "10–20%",
+      "role": "Nobel laureate"
+    },
+    {
+      "name": "Lina Khan",
+      "lo": 0.15,
+      "hi": 0.15,
+      "label": "~15%",
+      "role": "Former FTC chair"
+    },
+    {
+      "name": "Vitalik Buterin",
+      "lo": 0.12,
+      "hi": 0.12,
+      "label": "12%",
+      "role": "Ethereum"
+    },
+    {
+      "name": "Toby Ord",
+      "lo": 0.1,
+      "hi": 0.1,
+      "label": "10%",
+      "role": "Author, The Precipice"
+    },
+    {
+      "name": "Nate Silver",
+      "lo": 0.05,
+      "hi": 0.1,
+      "label": "5–10%",
+      "role": "Statistician"
+    },
+    {
+      "name": "Yann LeCun",
+      "lo": 0.0001,
+      "hi": 0.0001,
+      "label": "<0.01%",
+      "role": "Former Meta chief AI scientist"
+    }
+  ]
+}

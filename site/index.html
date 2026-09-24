@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI Risk Ledger</title>
+<meta name="description" content="Forecasts on AI catastrophe, misuse, and governance from Metaculus, Manifold, Polymarket and Kalshi, with full history and expert p(doom) estimates.">
+<meta property="og:title" content="AI Risk Ledger">
+<meta property="og:description" content="Live AI risk forecasts from Metaculus, Manifold, Polymarket and Kalshi, with history.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23111922'/%3E%3Cpath d='M6 22 L12 16 L17 19 L26 9' stroke='%236da7ec' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <h1>AI Risk Ledger</h1>
+    <div class="stamp">Last refreshed<b id="stamp">—</b></div>
+    <p class="dek">Forecasts on AI catastrophe, misuse, and governance from Metaculus, Manifold, Polymarket and Kalshi, next to published expert estimates. Each figure links to its source. Prices refresh every six hours from each platform's public API.</p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <section id="trends" aria-labelledby="th">
+    <div class="sec-h">
+      <h2 id="th">How the forecasts have moved</h2>
+      <p>Weekly readings back to each question's opening, then one reading per day.</p>
+    </div>
+    <div class="hero-chart">
+      <div class="hero-top">
+        <div>
+          <h3>AI catastrophe by 2100</h3>
+          <p>Metaculus implied figures come from multiplying its conditional questions. The Manifold line is a play-money extinction market, which is biased low.</p>
+        </div>
+        <div class="ranges" role="group" aria-label="Time range" id="hero-range"></div>
+      </div>
+      <div class="lg" id="hero-legend"></div>
+      <div class="chart" id="hero-chart"></div>
+    </div>
+    <div class="movers" id="movers"></div>
+    <p class="hint">Biggest moves in risk questions over the last 30 days, in percentage points. Select any question below to see its full history.</p>
+  </section>
+
+  <section id="questions" aria-labelledby="qh">
+    <div class="sec-h">
+      <h2 id="qh">Live questions</h2>
+      <p>Probability of YES. Bars share one 0–100% scale. The change column compares today with 30 days ago.</p>
+    </div>
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Category" id="cats"></div>
+      <div class="seg" role="group" aria-label="Sources" id="srcs"></div>
+      <label class="sortsel" for="sort">Sort
+        <select id="sort">
+          <option value="group">By category</option>
+          <option value="high">Highest first</option>
+          <option value="low">Lowest first</option>
+          <option value="part">Most participation</option>
+          <option value="move">Biggest 30-day move</option>
+        </select>
+      </label>
+    </div>
+    <div class="table" id="table"></div>
+  </section>
+
+  <section id="experts" aria-labelledby="eh">
+    <div class="sec-h">
+      <h2 id="eh">Expert estimates</h2>
+      <p>Stated views, not markets. Updated by hand when new estimates are published.</p>
+    </div>
+    <div class="twocol">
+      <div class="panel">
+        <h3>Individual p(doom)</h3>
+        <p class="sub">Log scale. Bars show a stated range. Each person defines "doom" and the time horizon differently.</p>
+        <div class="chart-scroll"><div id="dots"></div></div>
+      </div>
+      <div class="panel">
+        <h3>Surveys, tournaments and models</h3>
+        <p class="sub">Structured, aggregated estimates.</p>
+        <div class="studies" id="studies"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="method" aria-labelledby="mh">
+    <div class="sec-h"><h2 id="mh">How to read this</h2></div>
+    <div class="method">
+      <div><h4>Sources differ in kind</h4><p>Metaculus shows a community forecast with no money at stake. Manifold uses play money. Polymarket and Kalshi trade real money, so their AI questions lean short-term and policy-focused. The participation column shows forecasters, traders or dollar volume.</p>
+        <div class="legend" id="legend"></div></div>
+      <div><h4>Extinction markets are biased low</h4><p>A market on human extinction can never pay out on YES, so traders have little reason to bid it up. Read the Manifold "wipe out humanity" prices as a lower bound on what traders believe, not a fair estimate.</p></div>
+      <div><h4>Implied figures</h4><p>Metaculus asks about AI catastrophe as a chain of conditionals. Rows marked "Implied" multiply the chain: P(10% population decline) × P(caused by AI | decline) × P(95% or more | AI catastrophe). Those rows are our calculation, not a Metaculus forecast.</p></div>
+      <div><h4>No real-money market on AI mass casualties</h4><p>Polymarket and Kalshi list no market on AI killing a share of humanity. Their AI questions cover regulation, lab behavior and AGI announcements. A market on AI killing 10% of people could still pay out to survivors, so its absence reflects listing and regulatory choices rather than the payout problem that breaks extinction markets.</p></div>
+      <div><h4>Definitions are not aligned</h4><p>"Catastrophe", "wipe out" and "p(doom)" mean different things on each platform and to each person. Compare rows only when their wording and time horizon match. Low-participation markets are shown but should carry little weight.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Prices refresh every six hours from public APIs. Expert estimates come from the sources linked beside them. <a href="data.json">Download the data</a> · <a href="REPO_URL" id="repo-link">Source on GitHub</a></span>
+    <span id="count"></span>
+  </footer>
+</div>
+<div class="tip" id="tip" hidden></div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
