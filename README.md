@@ -2,7 +2,7 @@
 
 One page that tracks what forecasters and prediction markets expect from AI: catastrophe, misuse, governance and AGI timing. It pulls from Metaculus, Manifold, Polymarket and Kalshi every six hours, keeps the full price history, and shows it next to published expert estimates.
 
-The site is static and runs on GitHub Pages. GitHub Actions does the fetching. There is no server and no database: the history lives in this repo as CSV files, so every change is auditable in git.
+The site is static and hosted on Vercel. GitHub Actions does the fetching, rebuilds `site/data.json` and commits it; Vercel redeploys the `site` folder on every commit. There is no server and no database: the history lives in this repo as CSV files, so every change is auditable in git.
 
 ## What it tracks
 
@@ -23,11 +23,12 @@ data/history/<id>.csv    one row per day: date, probability, participation
 data/experts.json        hand-maintained expert estimates
 ledger/                  Python package (standard library only)
   sources/               one adapter per platform
-site/                    index.html, app.js, style.css (built data.json is added at deploy)
+site/                    index.html, app.js, style.css, data.json (built by the update job)
+vercel.json              serves site/ as a static site, no build step
 .github/workflows/       update.yml (every 6h), backfill.yml (manual), test.yml
 ```
 
-Every six hours `update.yml` runs `python -m ledger update`. It fetches each question's current value, writes today's row to its CSV, commits the change, rebuilds `site/data.json` and deploys the site.
+Every six hours `update.yml` runs `python -m ledger update`. It fetches each question's current value, writes today's row to its CSV, rebuilds `site/data.json` and commits both. Vercel sees the commit and publishes the `site` folder. There is no build step on Vercel.
 
 Implied rows, such as "AI kills 10%+ of humanity by 2100", are computed at build time by multiplying Metaculus's conditional questions. They are labeled as our calculation, not a platform forecast.
 
@@ -56,10 +57,10 @@ Polymarket's Gamma search endpoints can return stale prices, so they are used on
    git remote add origin https://github.com/<you>/ai-risk-ledger.git
    git push -u origin main
    ```
-3. In the repo, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-4. Recommended: create a free Metaculus API token at <https://www.metaculus.com/accounts/settings/> and add it under **Settings → Secrets and variables → Actions** as `METACULUS_TOKEN`. Without it the fetcher uses Metaculus's public web path, which may be rate-limited from GitHub's servers.
-5. Open **Actions → Backfill history → Run workflow** (leave the id blank). The repo ships with weekly history; this fills in daily points from every source.
-6. Open **Actions → Update and deploy → Run workflow**. The site appears at `https://<you>.github.io/ai-risk-ledger/` and updates every six hours after that.
+3. In Vercel, import the repository (or connect it to the existing `ai-risk-ledger` project under **Settings → Git**). `vercel.json` sets the output folder to `site` with no build step, so no other settings are needed.
+4. Recommended: create a free Metaculus API token at <https://www.metaculus.com/accounts/settings/> and add it in GitHub under **Settings → Secrets and variables → Actions** as `METACULUS_TOKEN`. Without it the fetcher uses Metaculus's public web path, which may be rate-limited from GitHub's servers.
+5. In GitHub, open **Actions → Backfill history → Run workflow** (leave the id blank). The repo ships with weekly history; this fills in daily points from every source.
+6. Open **Actions → Update data → Run workflow** once to confirm every source responds. After that it runs every six hours and each run redeploys the site.
 
 GitHub pauses scheduled workflows in repos with no activity for 60 days. The bot's own data commits normally count as activity, but if the schedule ever stops, re-enable it from the Actions tab.
 
