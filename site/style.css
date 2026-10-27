@@ -183,3 +183,9 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0}
 img{max-width:100%}
 [hidden]{display:none!important}
+
+.fund-support{padding:24px;border:1px solid var(--line);background:var(--surface);border-radius:8px}
+.fund-support h2{margin:0 0 10px}.fund-support p{color:var(--ink-2);max-width:70ch}
+.fund-support-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.fund-donate{display:inline-block;padding:10px 16px;background:var(--ink);color:var(--bg);border-radius:6px;text-decoration:none;font-weight:600}
+.fund-donate:hover{opacity:.85}
